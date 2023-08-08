@@ -1,19 +1,10 @@
-const s1 = document.querySelectorAll(".s1")
-const s2 = document.querySelectorAll(".s2")
-const span = document.querySelector(".span")
+const questions = document.querySelectorAll(".question")
 
-s1.forEach(function(btn){
-    btn.addEventListener("click", function(e){
-       e.currentTarget.parentElement.parentElement.parentElement.classList.add("close");;
-       e.currentTarget.parentElement.parentElement.parentElement.classList.add("open");
+
+questions.forEach((question)=>{
+    const btn = question.querySelector(".question-btn")
+    btn.addEventListener("click", ()=>{
+        question.classList.toggle("show")
     })
 })
-
-s2.forEach(function(btn){
-    btn.addEventListener("click", function(e){
-       e.currentTarget.parentElement.parentElement.parentElement.classList.remove("close");;
-       e.currentTarget.parentElement.parentElement.parentElement.classList.remove("open");
-    })
-})
-
 
